@@ -382,6 +382,7 @@ void setup() {
   sim();
 
   //CEK KUOTA
+   /*
   hapusmenu(17, 64);
   display.getTextBounds(F("CHECK BALANCE"), 0, 0, &posx, &posy, &w, &h);
   display.setCursor((128 - w) / 2, 20);
@@ -392,14 +393,14 @@ void setup() {
   display.setCursor((128 - w) / 2, 30);
   display.print(F("*888#3#2"));
   display.display();
-  cekkuota();
+  //cekkuota();
   i_En(oled);
   display.getTextBounds(F("Finish!!!"), 0, 0, &posx, &posy, &w, &h);
   display.setCursor((128 - w) / 2, 40);
   display.print(F("Finish!!!"));
   display.display();
   off();
-
+*/
 
   display.clearDisplay();
   displaydate();
@@ -407,7 +408,7 @@ void setup() {
   setTime(nows.hour(), nows.minute(), nows.second(), nows.month(), nows.day(), nows.year());
   Alarm.timerRepeat(60, displaydate);
   Alarm.timerRepeat(60 * interval, ambil);
-  Alarm.alarmRepeat(5, 0, 0, cekkuota); // 5:00am every day
+ // Alarm.alarmRepeat(5, 0, 0, cekkuota); // 5:00am every day
 
   //display menu parameter
   hapusmenu(17, 64);
